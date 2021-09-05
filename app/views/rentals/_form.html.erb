@@ -1,0 +1,27 @@
+<% @cars = Car.all %>
+<%= form_for(@rental) do |f| %>
+  <div class="field">
+    <%= f.label :start_date %>
+    <%= f.datetime_select :start_date, :ampm => true, :minute_step => 15 %>
+  </div>
+   <div class="field">
+    <%= f.label :end_date %>
+    <%= f.datetime_select :end_date, :ampm => true, :minute_step => 15 %>
+  </div>
+  <div class="field">
+    <%= f.label :distance %>
+    <%= f.text_field :distance, class: "form-control" %>
+  </div>
+  <div class="field mt-3">
+    <%= f.label :car %>
+     <span>
+      <%= f.select :car_id, @cars.map { |c| [c.price_per_km, c.price_per_day, c.id] },
+        prompt: "select car" %>
+    </span>
+  </div>
+
+  <div class="field mt-3">
+    <%= f.submit "submit", class: "btn btn-primary" %>
+  </div>
+<% end %>
+

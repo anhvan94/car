@@ -1,0 +1,10 @@
+<% @cars = Car.all %>
+<div class="row row-30 row-md-50 row-xl-70">
+  <%= link_to "rent",new_rental_path %>
+  <% @cars.each do |car| %>
+  <div class="col-sm-6 col-lg-4 wow fadeIn">
+    price per day : <%= car.price_per_day %>
+    price per km : <%= car.price_per_km %>
+  </div>
+    <% end %>
+</div>

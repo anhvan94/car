@@ -1,0 +1,12 @@
+  <div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@car) do |f| %>
+
+    <%= f.label :price_per_day %>
+    <%= f.text_field :price_per_day, class: 'form-control' %>
+    <%= f.label :price_per_km %>
+    <%= f.text_field :price_per_km, class: 'form-control' %>
+    <%= f.submit "Create car", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+  </div>

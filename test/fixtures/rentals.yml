@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  car_id: 1
+  start_date: 2021-09-04 02:47:35
+  end_date: 2021-09-04 02:47:35
+  distance: 1.5
+
+two:
+  car_id: 1
+  start_date: 2021-09-04 02:47:35
+  end_date: 2021-09-04 02:47:35
+  distance: 1.5
